@@ -5,9 +5,13 @@
 
 
 # useful for handling different item types with a single interface
+import csv
 from itemadapter import ItemAdapter
 
 
 class ArcoprojectPipeline:
+    def __init__(self):
+       self.csvwriter = csv.writer(open('Links.csv', 'wb')) 
     def process_item(self, item, spider):
-        return item
+       self.csvwriter.writerow((item['title'][0]), item['link'][0])
+       return item

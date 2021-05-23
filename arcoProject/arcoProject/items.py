@@ -6,7 +6,9 @@
 import scrapy
 
 
-class ArcoprojectItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class CelticsItem(scrapy.Item):
+    title = scrapy.Field()
+    description = scrapy.Field()
+    date = scrapy.Field()
+    duration = scrapy.Field()
+    link = scrapy.Field()
